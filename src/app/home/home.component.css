@@ -1,0 +1,67 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.presentation {
+    position: absolute;
+    color: white;  
+    top: 9.3%;
+    width: 100vw;
+    height: 80vh;
+    background: rgb(0 0 0 / 70%);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: none;
+}
+
+.presentation h1 {
+    font-size:4.5em;
+    font-family: "Satisfy", serif;
+    color: #fff;
+    text-align: center;
+
+}
+
+.presentation h2 {
+    color: #eee;
+    margin-bottom: 50px;
+    font-size: 1.8em;
+    font-family: "Satisfy", serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    
+}
+
+/* -==== Icon ====- */
+
+.bi-icon {
+    font-size: 40px;
+    color: #fff;
+    
+}
+
+.bi-icon:hover{
+    color:  #ffb727;
+}
+
+.bi-icon-movement {
+  animation: MoveUpDown 3s linear infinite;
+  position: absolute;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+
+
