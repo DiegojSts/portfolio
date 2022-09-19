@@ -18,8 +18,11 @@
 }
 
 .navbar-glass {
-    background: rgb(0 0 0 / 90%);
+    z-index: 1;
+    position: fixed;
+    background: rgb(0 0 0 / 20%);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     border: none;
+    width: 100vw;
 }
