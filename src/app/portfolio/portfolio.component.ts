@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+
+  constructor() { 
+
+  }
+
 
   ngOnInit(): void {
+    const elements = document.querySelectorAll('[data-filter]');
+   
+    for(let i = 0; i < elements.length; i++){
+      elements[i].addEventListener('click', ()=> {
+        let current = document.getElementsByClassName("filter-active");
+        current[0].className = current[0].className.replace("filter-active", "");
+        elements[i].className += "filter-active";
+        
+        
+      })
+    }
+   
+      
   }
 
 }

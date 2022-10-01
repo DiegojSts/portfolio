@@ -1,0 +1,25 @@
+.portfolio #portfolio-filters {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio #portfolio-filters li {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px 10px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 7px 10px;
+    text-transform: uppercase;
+    color: #444444;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #fff;
+  }
+
+.portfolio #portfolio-filters li:hover,
+.portfolio #portfolio-filters .filter-active {
+  color: #f3a200;
+  border-color: #ffb727;
+}
+
