@@ -11,6 +11,8 @@ import { ResumeComponent } from './resume/resume.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { PortolioDetailsComponent } from './portolio-details/portolio-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -22,12 +24,14 @@ import { FooterComponent } from './footer/footer.component';
     ResumeComponent,
     PortfolioComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    PortolioDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
     
   ],
   providers: [],

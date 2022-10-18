@@ -23,3 +23,22 @@
   border-color: #ffb727;
 }
 
+img {
+  width: 50%;
+}
+.portfolio .portfolio-item:hover .portfolio-img img {
+  transform: scale(1.2);
+}
+
+.portfolio .portfolio-item .portfolio-img {
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+  transition: all 0.8s ease-in-out;
+}
+
+.portfolio-info {
+  color: red;
+  position: absolute;
+}
