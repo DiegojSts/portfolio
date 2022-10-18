@@ -11,7 +11,26 @@
         <li data-filter=".filter-web">Web</li>
         <li data-filter=".filter-node">Node</li>
     </ul>
-    <div class="portfolio-container container d-flex" *ngFor="let item of items">
+
+<router-outlet></router-outlet>
+
+    <div class="portfolio-container d-flex" *ngFor="let item of items">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top" [src]="item.mainImageUrl" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title {{item.programmingLanguage}}</h5>
+                        <p class="card-text">{{item.shortDescription}}</p>
+                        <a [routerLink]="['/portfolio-details', item.id]" class="btn btn-primary">Detalhes</a>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+
+        </div>
         <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-img"><img src="../../assets/img/background.jpeg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
@@ -21,14 +40,8 @@
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div> -->
-          
-          <div class="card m-2" style="width: 18rem;">
-            <img class="card-img-top" [src]="item.imageUrl" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title {{item.programmingLanguage}}</h5>
-              <p class="card-text">{{item.description}}</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+
+
     </div>
+
 </section>

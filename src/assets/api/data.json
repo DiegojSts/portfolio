@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "programmingLanguage": "Java",
+        "shortDescription": "Java programming language",
+        "fullDescription": "Full Description ...",
+        "mainImageUrl": "../../assets/img/java.png",
+        "image_1": "",
+        "image_2": "",
+        "image_3": ""
+    },
+    {
+        "id": 2,
+        "programmingLanguage": "Node",
+        "shortDescription": "Node programming language",
+        "fullDescription": "Full Description ...",
+        "mainImageUrl": "../../assets/img/node.png",
+        "image_1": "",
+        "image_2": "",
+        "image_3": ""
+    }
+]

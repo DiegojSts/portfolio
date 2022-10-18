@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApiService } from '../api.service';
+import { IInfo } from '../info';
 
 @Component({
   selector: 'app-portolio-details',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortolioDetailsComponent implements OnInit {
 
-  constructor() { }
+  tool: IInfo | undefined;
+  errorMessage = '';
+
+  constructor(
+    private route: ActivatedRoute,
+    private apiService: ApiService
+    ) { }
 
   ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+
+    if(id){
+      this.getToolId(id);
+    }
+  }
+
+  getToolId(id: number): void{
+    this.apiService.getToolsById(id).subscribe({
+      next: tool => this.tool = tool,
+      error: err => this.errorMessage = err
+    })
   }
 
 }

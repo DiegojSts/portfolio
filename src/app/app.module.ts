@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortolioDetailsComponent } from './portolio-details/portolio-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -31,8 +32,14 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    RouterModule.forRoot([
+
+      // { path: 'portfolio-details', component: PortolioDetailsComponent},
+      { path: 'portfolio-details/:id', component: PortolioDetailsComponent}
+      
+    ])
+
   ],
   providers: [],
   bootstrap: [AppComponent]

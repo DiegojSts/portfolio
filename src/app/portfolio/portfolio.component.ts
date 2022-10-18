@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Subscribable, Subscription } from 'rxjs';
 import { ApiService } from '../api.service';
-import { ITools } from '../tools';
+import { IInfo } from '../info';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,22 +10,20 @@ import { ITools } from '../tools';
 })
 export class PortfolioComponent implements OnInit {
 
-  // items: ITools[] = [];
-  items = [{"id": 1, "programmingLanguage": "Java", "description": "Java programming language", "imageUrl": "../../assets/img/java.png"},{"id": 2, "programmingLanguage": "Node","description": "Node programming language", "imageUrl": "../../assets/img/node.png" }];
-
+  items: IInfo[] = [];
   sub!: Subscription;
   errorMessage = '';
 
-  // constructor(private apiService: ApiService) { 
+  constructor(private apiService: ApiService) { 
 
-  //   this.sub = this.apiService.getTools().subscribe({
-  //     next: item => {
-  //       this.items = item
+    this.sub = this.apiService.getTools().subscribe({
+      next: item => {
+        this.items = item
           
-  //     },
-  //     error: err => this.errorMessage = err
-  //   })
-  // }
+      },
+      error: err => this.errorMessage = err
+    })
+  }
 
 
   ngOnInit(): void {
