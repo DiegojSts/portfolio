@@ -1,7 +1,8 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Subscribable, Subscription } from 'rxjs';
 import { ApiService } from '../api.service';
 import { IInfo } from '../info';
+import { PortolioDetailsComponent } from '../portolio-details/portolio-details.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -13,6 +14,9 @@ export class PortfolioComponent implements OnInit {
   items: IInfo[] = [];
   sub!: Subscription;
   errorMessage = '';
+  active = true;
+
+  // @ViewChild(PortfolioComponent) portfolioComponent?: PortfolioComponent;
 
   constructor(private apiService: ApiService) { 
 
@@ -27,10 +31,12 @@ export class PortfolioComponent implements OnInit {
 
 
   ngOnInit(): void {
+  
     const elements = document.querySelectorAll('[data-filter]');
    
     for(let i = 0; i < elements.length; i++){
       elements[i].addEventListener('click', ()=> {
+        console.log("Oi")
         let current = document.getElementsByClassName("filter-active");
         current[0].className = current[0].className.replace("filter-active", "");
         elements[i].className += "filter-active";
@@ -40,6 +46,10 @@ export class PortfolioComponent implements OnInit {
     }
    
       
+  }
+
+  status(): void{
+    this.active = !this.active;
   }
 
 }

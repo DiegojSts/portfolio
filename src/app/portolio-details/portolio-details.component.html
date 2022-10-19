@@ -2,7 +2,7 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center" *ngIf="tool">
-        <h2>Detalhes do {{tool.programmingLanguage}}</h2>
+        <h3>Detalhes do {{tool.projectName}}</h3>
         <ol>
           <li><a href="#home">Inicio</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -13,7 +13,7 @@
     </div>
   </section><!-- Breadcrumbs Section -->
 
-  <section id="portfolio-details" class="portfolio-details">
+  <section id="portfolio-details" class="portfolio-details" *ngIf="tool">
     <div class="container">
 
       <div class="row gy-4">
@@ -23,43 +23,34 @@
             <div class="swiper-wrapper align-items-center">
 
               <div class="swiper-slide">
-                <img src="../../assets/img/background.jpeg" alt="">
+                <img [src]="tool.gif" alt="">
               </div>
 
-              <div class="swiper-slide">
-                <img src="../../assets/img/background.jpeg" alt="">
-              </div>
-              
-              <div class="swiper-slide">
-                <img src="../../assets/img/background.jpeg" alt="">
-              </div>
-
+             
 
             </div>
-            <div class="swiper d-flex align-items-center justify-content-center gap-2">
-                <hr >
-                <hr >
-                <hr>
-            </div>
+         
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4" >
           <div class="portfolio-info">
-            <h3>Project information</h3>
+            <h3>Informações do Projeto</h3>
             <ul>
-              <li><strong>Category</strong>: Web design</li>
-              <li><strong>Client</strong>: ASU Company</li>
-              <li><strong>Project date</strong>: 01 March, 2020</li>
-              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <li><strong>Categoria</strong>: {{tool.category}}</li>
+              <li><strong>Data do Projeto</strong>: {{tool.projectDate}}</li>
+              <li><strong>Link do Projeto</strong>: <a [href]="tool.projectUrl">{{tool.projectUrl}}</a></li>
+              <li><strong>GitHub do Projeto</strong>: <a [href]="tool.github">{{tool.github}}</a></li>
+              <li><strong>Tecnologias</strong>: <i>{{tool.technologies_1}},  {{tool.technologies_2}},  {{tool.programmingLanguage}}</i> </li>
+              <div class="portfolio-description">
+                <h3>Sobre o Projeto</h3>
+                <p>
+                  {{tool.fullDescription}}
+                </p>
+              </div>
             </ul>
           </div>
-          <div class="portfolio-description">
-            <h2>This is an example of portfolio detail</h2>
-            <p>
-              Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-            </p>
-          </div>
+         
         </div>
 
       </div>

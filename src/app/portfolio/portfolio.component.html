@@ -6,10 +6,12 @@
         <h2>Portfólio</h2>
 
     </div>
-    <ul id="portfolio-filters" class="d-flex justify-content-center">
+    <ul id="portfolio-filters" class="d-flex justify-content-center" *ngIf="active">
         <li data-filter=".filter-all" class="filter-active">Todos</li>
-        <li data-filter=".filter-web">Web</li>
+        <li data-filter=".filter-web">CSS, HTML, JavaScript</li>
+        <li data-filter=".filter-web">Angular</li>
         <li data-filter=".filter-node">Node</li>
+        <li data-filter=".filter-node">Java</li>
     </ul>
 
 <router-outlet></router-outlet>
@@ -17,13 +19,16 @@
     <div class="portfolio-container d-flex" *ngFor="let item of items">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" *ngIf="active">
                     <div class="card m-2" style="width: 18rem;">
-                    <img class="card-img-top" [src]="item.mainImageUrl" alt="Card image cap">
+                        <picture class="d-flex align-items-center justify-content-center">
+                            <img class="card-img-top" [src]="item.mainImageUrl" alt="Card image cap">
+                        </picture>
                     <div class="card-body">
-                        <h5 class="card-title">Card title {{item.programmingLanguage}}</h5>
+                        <h5 class="card-title">Projeto: {{item.projectName}}</h5>
+                        <h6><i>{{item.programmingLanguage}}, {{item.technologies_1}}</i></h6>
                         <p class="card-text">{{item.shortDescription}}</p>
-                        <a [routerLink]="['/portfolio-details', item.id]" class="btn btn-primary">Detalhes</a>
+                        <a (click)="status()" [routerLink]="['/portfolio-details', item.id]" class="btn btn-background">Detalhes</a>
                     </div>
                 </div>
                 </div>

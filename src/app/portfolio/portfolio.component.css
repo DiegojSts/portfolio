@@ -18,13 +18,13 @@
   }
 
 .portfolio #portfolio-filters li:hover,
-.portfolio #portfolio-filters .filter-active {
+.portfolio #portfolio-filters .filter-active,h5 {
   color: #f3a200;
   border-color: #ffb727;
 }
 
 img {
-  width: 50%;
+  width: 100%;
 }
 .portfolio .portfolio-item:hover .portfolio-img img {
   transform: scale(1.2);
@@ -42,3 +42,18 @@ img {
   color: red;
   position: absolute;
 }
+
+.btn-background {
+  /* background-color: #ffb727; */
+  background-color: #444444;
+  color: #ffffff;
+}
+
+.btn-background:hover {
+  background-color: #ffb727;
+}
+
+.card-bx {
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+}
+
