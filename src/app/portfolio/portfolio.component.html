@@ -8,13 +8,12 @@
     </div>
     <section class="container">
 
-        <ul id="portfolio-filters" class="d-flex justify-content-center">
-            <div class="">
-                <li class="" data-filter=".filter-all" >Todos</li>
-                <li class="" data-filter=".filter-web">CSS, HTML, JavaScript</li>
-                <li class="" data-filter=".filter-web">Angular</li>
-                <li class="" data-filter=".filter-node">Node</li>
-                <li class="" data-filter=".filter-node">Java</li>
+        <ul id="portfolio-filters" class="d-flex justify-content-center ">
+            <div class="row ul-options">
+                <li class="col-sm-12 col-md-3 " data-filter=".filter-all" >Todos</li>
+                <li style="flex-grow: 3;" class="col-sm-12 col-md-2 " data-filter=".filter-web">CSS, HTML, JS</li>
+                <li class="col-sm-12 col-md-2 " data-filter=".filter-web">Angular</li>
+                <li class="col-sm-12 col-md-2 " data-filter=".filter-node">Java</li>
             </div>
 
         </ul>
@@ -28,7 +27,7 @@
         <div class="portfolio-container " *ngFor="let item of items">
             <div class="">
                 <div class="">
-                    <div class="container card m-2" style="width: 18rem;">
+                    <div class="container card ml-2" style="width: 18rem; margin-left: 35px;">
                         <picture class=" d-flex align-items-center justify-content-center">
                             <img class="card-img-top" [src]="item.mainImageUrl" alt="Card image cap">
                         </picture>

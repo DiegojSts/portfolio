@@ -5,16 +5,16 @@
   
   .portfolio #portfolio-filters li {
     cursor: pointer;
-    display: inline-block;
+    /* display: inline-block; */
     margin: 0 10px 10px 10px;
     font-size: 15px;
     font-weight: 600;
     line-height: 1;
     padding: 7px 10px;
     text-transform: uppercase;
-    color: #444444;
+    color: #020202;
     transition: all 0.3s ease-in-out;
-    border: 2px solid #fff;
+    /* border: 2px solid #fff; */
   }
 
 .portfolio #portfolio-filters li:hover,
@@ -24,7 +24,7 @@
 }
 
 img {
-  width: 100%;
+  width: 109%;
 }
 .portfolio .portfolio-item:hover .portfolio-img img {
   transform: scale(1.2);
@@ -57,3 +57,18 @@ img {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
 }
 
+
+.ul-options {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  text-align: center;
+}
+
+@media (min-width: 300px) and (max-width:767px) {
+  #portfolio-filters li {
+    display: inline-block;
+    text-align: left;
+  }
+}
