@@ -15,9 +15,11 @@ export class PortfolioComponent implements OnInit {
   sub!: Subscription;
   errorMessage = '';
   active = true;
+  hide = false;
 
   // @ViewChild(PortfolioComponent) portfolioComponent?: PortfolioComponent;
 
+  
   constructor(private apiService: ApiService) { 
 
     this.sub = this.apiService.getTools().subscribe({
@@ -32,18 +34,15 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
   
-    const elements = document.querySelectorAll('[data-filter]');
+    const elements = document.querySelectorAll('#portfolio-filters li');
    
-    // for(let i = 0; i < elements.length; i++){
-    //   elements[i].addEventListener('click', ()=> {
-    //     console.log("Oi")
-    //     let current = document.getElementsByClassName("filter-active");
-    //     current[0].className = current[0].className.replace("filter-active", "");
-    //     elements[i].className += "filter-active";
-        
-        
-    //   })
-    // }
+    for(let i = 0; i < elements.length; i++){
+      elements[i].addEventListener('click', ()=> {
+        let current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace("active", "");
+        elements[i].classList.add('active');  
+      })
+    }
    
       
   }
@@ -51,16 +50,27 @@ export class PortfolioComponent implements OnInit {
 
 
   onClick(innerHtmlReference?: Element){
-    let element = innerHtmlReference;
+
+    console.log(innerHtmlReference?.innerHTML)
     let porfolioContainer= document.getElementById('portfolioContainer');
 
-    let dataFilter = porfolioContainer?.querySelectorAll('[data-filter]').forEach(item => {
-      console.log(item.getAttribute('data-filter'));
-    });
+    porfolioContainer?.querySelectorAll('[data-filter]').forEach(item => {
 
-    
-   
-    
+      item.hasAttribute('hidden') ? item.removeAttribute('hidden') : "";
+     
+      if(item.getAttribute('data-filter') != innerHtmlReference?.innerHTML){
+       item.setAttribute('hidden', 'hidden');
+      }
+    }); 
+  }
+
+  reset(): void{
+    let porfolioContainer= document.getElementById('portfolioContainer');
+
+    porfolioContainer?.querySelectorAll('[data-filter]').forEach(item => {
+      item.removeAttribute('hidden'); 
+    }); 
+
   }
 
   status(): void{

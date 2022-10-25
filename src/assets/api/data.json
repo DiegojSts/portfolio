@@ -7,7 +7,7 @@
         "shortDescription": "A aplicação consiste em uma pesquisa de preferência de games, onde os dados são coletados no app mobile, e depois são listados no app web, que também apresenta um dashboard com gráficos baseados nestes dados.",
         "fullDescription": "Big Game Survey é uma aplicação full stack web e mobile construída durante a 1ª edição da Semana DevSuperior (#sds1), evento organizado pela DevSuperior.",
         "mainImageUrl": "../../assets/img/biggame.png",
-        
+        "identifier": "Java",
         "gif": "../../assets/gif/BigGame.gif",
         "projectUrl": "https://diegosantos.netlify.app/",
         "projectDate": "07 Fev, 2021",
@@ -24,7 +24,7 @@
         "shortDescription": "Calculadora web é um mini projeto com o intuito de solidificar alguns conhecimentos nas tecnologias utilizadas [HTML, CSS e JavaScript]. A aplicação consiste em operações de adição, subtração, multiplicação e divisão",
         "fullDescription": "Calculadora web é um mini projeto com o intuito de solidificar alguns conhecimentos nas tecnologias utilizadas [HTML, CSS e JavaScript]. A aplicação consiste em operações de adição, subtração, multiplicação e divisão",
         "mainImageUrl": "../../assets/img/Calculadora.png",
-       
+        "identifier": "Angular",
         "gif": "../../assets/gif/Calc.gif",
         "projectUrl": "",
         "projectDate": "01 Mar, 2022",
@@ -41,7 +41,7 @@
         "shortDescription": "Calculadora web é um mini projeto com o intuito de solidificar alguns conhecimentos nas tecnologias utilizadas [HTML, CSS e JavaScript]. A aplicação consiste em operações de adição, subtração, multiplicação e divisão",
         "fullDescription": "Calculadora web é um mini projeto com o intuito de solidificar alguns conhecimentos nas tecnologias utilizadas [HTML, CSS e JavaScript]. A aplicação consiste em operações de adição, subtração, multiplicação e divisão",
         "mainImageUrl": "../../assets/img/Calculadora.png",
-       
+        "identifier": "CSS, HTML, JS",
         "gif": "../../assets/gif/Calc.gif",
         "projectUrl": "",
         "projectDate": "01 Mar, 2022",
@@ -50,4 +50,5 @@
         "github": "www.github.com"
         
     }
+   
 ]
