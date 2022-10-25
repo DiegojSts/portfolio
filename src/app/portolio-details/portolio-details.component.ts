@@ -24,6 +24,7 @@ export class PortolioDetailsComponent implements OnInit {
   ngOnInit(): void {
     
     const id = Number(this.route.snapshot.paramMap.get('id'));
+    console.log(this.route.snapshot.params)
 
     if(id){
       this.getToolId(id);

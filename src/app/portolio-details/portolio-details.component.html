@@ -2,7 +2,7 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center" *ngIf="tool">
-        <h3>Detalhes do {{tool.projectName}}</h3>
+        <h3>Detalhes do Item: {{tool.projectName}}</h3>
         <ol>
           <li><a href="#home">Inicio</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -22,14 +22,10 @@
           <div class="portfolio-details-slider swiper">
             <div class="swiper-wrapper align-items-center">
 
-              <div class="swiper-slide">
+              <div class="swiper-slide d-flex align-items-center justify-content-center">
                 <img [src]="tool.gif" alt="">
               </div>
-
-             
-
             </div>
-         
           </div>
         </div>
 
@@ -43,7 +39,7 @@
               <li><strong>GitHub do Projeto</strong>: <a [href]="tool.github">{{tool.github}}</a></li>
               <li><strong>Tecnologias</strong>: <i>{{tool.technologies_1}},  {{tool.technologies_2}},  {{tool.programmingLanguage}}</i> </li>
               <div class="portfolio-description">
-                <h3>Sobre o Projeto</h3>
+                <h5>Sobre o Projeto</h5>
                 <p>
                   {{tool.fullDescription}}
                 </p>

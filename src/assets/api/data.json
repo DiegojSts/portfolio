@@ -12,26 +12,7 @@
         "projectDate": "07 Fev, 2021",
         "technologies_1": "Spring Boot",
         "technologies_2": "React",
-        "github": "https://github.com/DiegojSts/DevSuperior",
-        "image_1": "",
-        "image_2": "",
-        "image_3": ""
-    },
-    {
-        "id": 2,
-        "projectName": "Todo App",
-        "category": "Fullstack",
-        "programmingLanguage": "Node",
-        "shortDescription": "Node programming language",
-        "fullDescription": "Full Description ...",
-        "mainImageUrl": "../../assets/img/node.png",
-        "projectUrl": "",
-        "projectDate": "01 Mar, 2022",
-        "technologies_1": "Nest",
-        "technologies_2": "Angular",
-        "github": "www.github.com",
-        "image_1": "",
-        "image_2": "",
-        "image_3": ""
+        "github": "https://github.com/DiegojSts/DevSuperior"
+      
     }
 ]

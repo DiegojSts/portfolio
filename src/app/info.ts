@@ -12,7 +12,5 @@ export interface IInfo {
     technologies_1: string,
     technologies_2: string,
     github: string,
-    image_1: string,
-    image_2: string,
-    image_3: string
+
 }
