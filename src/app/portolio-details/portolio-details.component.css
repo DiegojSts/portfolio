@@ -28,6 +28,7 @@ border: 2px solid black;
     padding: 0;
     margin: 0;
     font-size: 14px;
+    justify-content: center;
 }
 
 .breadcrumbs ol li+li {

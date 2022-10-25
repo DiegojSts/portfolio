@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscribable, Subscription } from 'rxjs';
 import { ApiService } from '../api.service';
 import { IInfo } from '../info';
@@ -14,12 +15,7 @@ export class PortfolioComponent implements OnInit {
   items: IInfo[] = [];
   sub!: Subscription;
   errorMessage = '';
-  active = true;
-  hide = false;
 
-  // @ViewChild(PortfolioComponent) portfolioComponent?: PortfolioComponent;
-
-  
   constructor(private apiService: ApiService) { 
 
     this.sub = this.apiService.getTools().subscribe({
@@ -74,7 +70,16 @@ export class PortfolioComponent implements OnInit {
   }
 
   status(): void{
-    this.active = !this.active;
+    let porfolioContainer= document.getElementById('portfolioContainer');
+    let elements = document.querySelectorAll('#portfolio-filters li');
+    
+    elements.forEach(item => {
+      item.setAttribute('hidden', 'hidden');
+    })
+
+    porfolioContainer?.querySelectorAll('[data-filter]').forEach(item => {
+      item.setAttribute('hidden', 'hidden');
+    })
   }
 
 }
