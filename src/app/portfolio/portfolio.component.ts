@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Subscribable, Subscription } from 'rxjs';
 import { ApiService } from '../api.service';
 import { IInfo } from '../info';
@@ -34,18 +34,33 @@ export class PortfolioComponent implements OnInit {
   
     const elements = document.querySelectorAll('[data-filter]');
    
-    for(let i = 0; i < elements.length; i++){
-      elements[i].addEventListener('click', ()=> {
-        console.log("Oi")
-        let current = document.getElementsByClassName("filter-active");
-        current[0].className = current[0].className.replace("filter-active", "");
-        elements[i].className += "filter-active";
+    // for(let i = 0; i < elements.length; i++){
+    //   elements[i].addEventListener('click', ()=> {
+    //     console.log("Oi")
+    //     let current = document.getElementsByClassName("filter-active");
+    //     current[0].className = current[0].className.replace("filter-active", "");
+    //     elements[i].className += "filter-active";
         
         
-      })
-    }
+    //   })
+    // }
    
       
+  }
+
+
+
+  onClick(innerHtmlReference?: Element){
+    let element = innerHtmlReference;
+    let porfolioContainer= document.getElementById('portfolioContainer');
+
+    let dataFilter = porfolioContainer?.querySelectorAll('[data-filter]').forEach(item => {
+      console.log(item.getAttribute('data-filter'));
+    });
+
+    
+   
+    
   }
 
   status(): void{

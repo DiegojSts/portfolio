@@ -6,6 +6,7 @@ export interface IInfo {
     shortDescription: string,
     fullDescription: string,
     mainImageUrl: string,
+   
     gif: string,
     projectUrl: string,
     projectDate: string,
