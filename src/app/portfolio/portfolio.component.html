@@ -2,8 +2,8 @@
 
 <section id="portfolio" class="portfolio">
     <div class="section-title">
-        <span>Portfólio</span>
-        <h2>Portfólio</h2>
+        <span>Projetos</span>
+        <h2>Projetos</h2>
 
     </div>
     <section class="container">
@@ -16,12 +16,10 @@
                 <li (click)="onClick(java)" class="col-sm-12 col-md-1" #java>Java</li>
             </div>
         </ul>
-
-
     </section>
 
-
     <router-outlet></router-outlet>
+
     <section id="portfolioContainer" class="d-flex container flex-wrap">
         <div  class="portfolio-container " *ngFor="let item of items">
 
@@ -37,22 +35,7 @@
                     <a (click)="status()" [routerLink]="['/portfolio-details', item.id]"
                         class="btn btn-background">Detalhes</a>
                 </div>
-
             </div>
-
-
-
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="../../assets/img/background.jpeg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div> -->
-
-
             <br>
         </div>
     </section>

@@ -29,25 +29,14 @@
 img {
   width: 109%;
 }
-.portfolio .portfolio-item:hover .portfolio-img img {
-  transform: scale(1.2);
-}
 
-.portfolio .portfolio-item .portfolio-img {
-  overflow: hidden;
-}
 
 .portfolio .portfolio-item .portfolio-img img {
   transition: all 0.8s ease-in-out;
 }
 
-.portfolio-info {
-  color: red;
-  position: absolute;
-}
 
 .btn-background {
-  /* background-color: #ffb727; */
   background-color: #444444;
   color: #ffffff;
 }
