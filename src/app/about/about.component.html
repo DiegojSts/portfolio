@@ -1,43 +1,82 @@
 <!-- ======= About Me Section ======= -->
 
-<section id="about">
+<section class="" id="about">
   <div class="section-title">
     <span>Sobre</span>
     <h2>Sobre</h2>
-    
+
   </div>
 
-  <div class="row avatar-row d-flex ">
+  <div class="row avatar-row d-flex custom-about-bg rounded">
     <div class="paragraph-cover d-flex justify-content-center">
       <div class="paragraph-title text-light text-center mt-5">
-        <p>Sou apaixonado por programação e tecnologia, sempre tive curiosidade para aprender sobre diversos temas e
-          pude encontrar na tecnologia grandes desafios e infindáveis possibilidades! Estou sempre em busca de
-          aprimoramento dos meus conhecimentos através de cursos, workshops, livros, etc. </p>
+        <p>
+          Sou apaixonado por programação e tecnologia, sempre tive curiosidade
+          para aprender sobre diversos temas e pude encontrar na tecnologia
+          grandes desafios e infindáveis possibilidades! Estou sempre em busca
+          de aprimoramento dos meus conhecimentos através de cursos, workshops,
+          livros, etc.
+        </p>
+
+        <p>Atualmente tenho focado meus estudos no desenvolvimento de aplicações com Java Spring Boot e Angular</p>
+
+        <h4>Alguns dos meus conhecimentos proveniente de experiências profissionais e pessoais envolvem: </h4>
+
+        <section id="flip-card-section">
+          <div [ngClass]="{'flip-card': isHoverActive}" class="flip-card">
+            <div class="flip-card-inner">
+              <div class="row flip-card-front flip-card-content-back">
+                <span class="col-sm-2 p-2">Java</span>
+                <span class="col-sm-2 p-2">Spring Boot</span>
+                <span class="col-sm-2 p-2">Docker</span>
+                <span class="col-sm-2 p-2">MySql</span>
+                <span class="col-sm-2 p-2">Redis</span>
+                <span class="col-sm-2 p-2">AWS SQS</span>
+              </div>
+              <hr>
+              <div class=" d-flex justify-content-center row flip-card-front flip-card-content-front">
+                <span class=" col-sm-2 p-2">Angular</span>
+
+              </div>
+              <div class="flip-card-back">
+                <h6> Desenvolvimento Backend ↭ Desenvolvimento Frontend</h6>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
       </div>
     </div>
-    <div class="col-lg-12 d-flex align-items-center">
-      <div class="row col-lg-12 d-flex justify-content-center ">
 
-        <div class="col-lg-4 d-flex justify-content-center mb-3">
-          <img class="img-fluid rounded-circle" src="../../assets/img/avatar.svg">
-        </div>
-        
-        <div class="col-lg-4 text-light">
+    <div class="col-lg-12 d-flex align-items-center">
+      <div class="row col-lg-12 d-flex justify-content-center">
+        <!-- <div class="col-lg-4 d-flex justify-content-center mb-1">
+
+          <img alt="Avatar" class="img-fluid rounded-circle"
+            src="../../assets/img/avatar.svg"
+          />
+        </div> -->
+
+         <!-- <div class="col-lg-4 text-light">
           <ul class=" ">
             <li><i class="bi bi-chevron-right"></i> <strong> Nome:</strong> <span> Diego Santos</span></li>
             <li><i class="bi bi-chevron-right"></i> <strong> Telefone:</strong> <span> +55 71 9 9350-7284</span></li>
             <li><i class="bi bi-chevron-right"></i> <strong> Cidade:</strong> <span> Salvador</span></li>
           </ul>
         </div>
+
         <div class="col-lg-4 text-light ">
           <ul>
             <li><i class="bi bi-chevron-right"></i> <strong> Gradução:</strong> <span> Tecnólogo</span></li>
             <li><i class="bi bi-chevron-right"></i> <strong> E-mail:</strong> <span> diegojs03@hotmail.com</span></li>
             <li><i class="bi bi-chevron-right"></i> <strong> Freelance:</strong> <span> Disponível</span></li>
           </ul>
-        </div>
-      </div>
+        </div> -->
 
+      </div>
     </div>
+
   </div>
-</section><!-- End About me -->
+</section>
+<!-- End About me -->

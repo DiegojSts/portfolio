@@ -2,7 +2,7 @@
     list-style: none;
     margin-bottom: 20px;
   }
-  
+
   .portfolio #portfolio-filters li {
     cursor: pointer;
     margin: 0 10px 10px 10px;
@@ -23,7 +23,7 @@
 .active {
   color: #f3a200 !important;
   border-bottom: 7px solid #f3a200 !important;
- 
+
 }
 
 img {
@@ -48,6 +48,7 @@ img {
 .card-bx {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
 }
+
 
 
 .ul-options {

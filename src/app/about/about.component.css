@@ -2,23 +2,134 @@ img {
     /* box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25); */
     width: 30%;
     margin-bottom: -82px;
-    
+
+
 }
 
+
+
 .paragraph-title {
-    
+
     width: 70%;
 }
 
 .avatar-row {
     padding: 2px;
-    background-color: #504e4e;
+    background-color: #586b8f;
 }
+
+.custom-about-bg:hover{
+  background-color: #232746;
+  transition: all 1s ease-in;
+  cursor: default;
+
+
+}
+
+.custom-about-bg{
+  background-color: #586b8f;
+  transition: all 1s ease-out;
+}
+
+
+.flip-card .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* .flip-card .flip-card-inner {
+  transform: rotateY(180deg);
+  cursor: pointer;
+} */
+
+
+.flip-card {
+  background-color: transparent;
+  /* width: 40%;
+  height: 30%; */
+  /* perspective: 1000px; */
+}
+
+.flip-card-inner {
+  /* position: relative; */
+  /* width: 20%;
+  height: 20%; */
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+  /* background-color: #191b1b; */
+  color: #ffffff;
+  padding: 15px;
+}
+
+
+
+
+
+.flip-card-front, .flip-card-back {
+  /* position: absolute; */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  /* width: 50%; */
+  /* height: 50%; */
+  /* background-color: #851818; */
+  /* gap: 20px; */
+  color: #f8f8f8;
+  /* position: absolute;
+  right: 70%; */
+}
+
+
+
+
+.flip-card-back {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  /* -webkit-text-stroke: 2px rgb(164 164 16); */
+  color: rgb(243, 242, 242);
+  /* font-family: sans-serif !important; */
+  font-size: 2.3em;
+  font-weight: 900;
+}
+
+.flip-card-content-back .flip-card-content-front{
+  content: "";
+}
+
 
 @media (min-width: 100px) and (max-width: 992px){
     img {
         margin-bottom: 0;
     }
+
+    .flip-card-front::before {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left:7px ;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: none;
+    }
+
+    .flip-card-content-front::before {
+    content: "Desenvolvimento para Frontend";
+
+    }
+
+    .flip-card-content-back::before {
+    content: "Desenvolvimento para Backend";
+
+    }
+
 }
 
 
