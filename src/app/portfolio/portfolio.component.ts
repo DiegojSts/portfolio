@@ -1,3 +1,4 @@
+import { SharedService } from './../shared.service';
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscribable, Subscription } from 'rxjs';
@@ -12,16 +13,22 @@ import { PortolioDetailsComponent } from '../portolio-details/portolio-details.c
 })
 export class PortfolioComponent implements OnInit {
 
+  @ViewChild(PortolioDetailsComponent) pdComponent!: PortolioDetailsComponent;
+
+
   items: IInfo[] = [];
   sub!: Subscription;
   errorMessage = '';
+  active = false;
 
-  constructor(private apiService: ApiService) { 
+
+  constructor(private apiService: ApiService, private sharedService: SharedService) {
+
 
     this.sub = this.apiService.getTools().subscribe({
       next: item => {
         this.items = item
-          
+
       },
       error: err => this.errorMessage = err
     })
@@ -29,18 +36,21 @@ export class PortfolioComponent implements OnInit {
 
 
   ngOnInit(): void {
-  
+    this.sharedService.isActive$.subscribe((value: boolean) => {
+      this.active = value;
+    });
+
     const elements = document.querySelectorAll('#portfolio-filters li');
-   
+
     for(let i = 0; i < elements.length; i++){
       elements[i].addEventListener('click', ()=> {
         let current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace("active", "");
-        elements[i].classList.add('active');  
+        elements[i].classList.add('active');
       })
     }
-   
-      
+
+
   }
 
 
@@ -53,26 +63,26 @@ export class PortfolioComponent implements OnInit {
     porfolioContainer?.querySelectorAll('[data-filter]').forEach(item => {
 
       item.hasAttribute('hidden') ? item.removeAttribute('hidden') : "";
-     
+
       if(item.getAttribute('data-filter') != innerHtmlReference?.innerHTML){
        item.setAttribute('hidden', 'hidden');
       }
-    }); 
+    });
   }
 
   reset(): void{
     let porfolioContainer= document.getElementById('portfolioContainer');
 
     porfolioContainer?.querySelectorAll('[data-filter]').forEach(item => {
-      item.removeAttribute('hidden'); 
-    }); 
+      item.removeAttribute('hidden');
+    });
 
   }
 
   status(): void{
     let porfolioContainer= document.getElementById('portfolioContainer');
     let elements = document.querySelectorAll('#portfolio-filters li');
-    
+
     elements.forEach(item => {
       item.setAttribute('hidden', 'hidden');
     })
@@ -80,6 +90,9 @@ export class PortfolioComponent implements OnInit {
     porfolioContainer?.querySelectorAll('[data-filter]').forEach(item => {
       item.setAttribute('hidden', 'hidden');
     })
+
+
+
   }
 
 }

@@ -23,7 +23,8 @@
 }
 
 .portfolio-bg {
-  background-color: #484a4e;
+  background: rgb(73,41,41);
+  background: linear-gradient(90deg, rgba(73,41,41,1) 0%, rgba(64,34,94,1) 48%, rgba(129,129,129,1) 100%);
 }
 
 .active {
@@ -59,12 +60,13 @@ img {
 
 
 .btn-background {
-  background-color: #444444;
+  background-color: #634d7e;
+  ;
   color: #ffffff;
 }
 
 .btn-background:hover {
-  background-color: #ffb727;
+  background-color: #bb86fc;
 }
 
 .card-bx {
@@ -90,7 +92,14 @@ i {
 
 .card {
   cursor: default;
-  background-color: #151515;
+  /* background-color: #151515; */
+
+  background: rgba(255, 255, 255, 0.014);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5.5px );
+-webkit-backdrop-filter: blur( 5.5px );
+border-radius: 10px;
+border: 1px solid rgb(255, 255, 255);
   font-family: 'Source Code Pro', monospace;
   display: grid;
   transform: scale(1);
@@ -121,7 +130,7 @@ i {
   transform: rotate(12deg);
   border: solid 2px #bb86fc;
   background-color: #151515;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: all ease-in-out 0.8s;
 
 
@@ -133,6 +142,9 @@ i {
 
 }
 
+.teste {
+  display: none;
+}
 
 
 
@@ -155,13 +167,46 @@ i {
 
   .active{
     transform: rotate(0);
-    background-color: #484a4e ;
+    background: transparent;
+  transition: all ease-in-out 0.8s;
+  color: #000000 !important;
+
+
+
+
 
   }
 
   .card {
     margin-left: 2px !important ;
+    color: #000000 !important;
+
   }
+
+  .cards:hover {
+    background-color: transparent;
+  }
+
+  .card-title {
+    color: #000000;
+  }
+
+  .card-text {
+    color: #000000;
+  }
+  .portfolio-bg {
+    background: #ffffff;
+  }
+
+  #portfolio-filters li{
+    color: #bb86fc !important;
+  }
+
+  #portfolio-filters li:hover{
+    color: #000000 !important;
+  }
+
+
 
 
 }

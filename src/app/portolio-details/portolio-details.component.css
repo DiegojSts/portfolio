@@ -11,7 +11,7 @@ border: 2px solid black;
 .swiper {
     width: 100%;
 }
-  
+
 
 
 .breadcrumbs {
@@ -49,12 +49,13 @@ border: 2px solid black;
 .portfolio-details {
     padding-top: 40px;
   }
-  
+
   .portfolio-details .portfolio-details-slider img {
     width: 100%;
+    border-radius: 10px;
   }
 
-  
+
   .portfolio-details .portfolio-info {
     padding: 30px;
     box-shadow: 0px 0 30px rgba(59, 67, 74, 0.08);
@@ -67,27 +68,52 @@ border: 2px solid black;
     padding-bottom: 20px;
     border-bottom: 1px solid #eee;
   }
-  
+
   .portfolio-details .portfolio-info ul {
     list-style: none;
     padding: 0;
     font-size: 15px;
   }
-  
+
   .portfolio-details .portfolio-info ul li+li {
     margin-top: 10px;
   }
-  
+
   .portfolio-details .portfolio-description {
     padding-top: 30px;
   }
-  
+
   .portfolio-details .portfolio-description h2 {
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 20px;
   }
-  
+
   .portfolio-details .portfolio-description p {
     padding: 0;
+  }
+
+  .template::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    width: 100%;
+    margin: 150px 300px 0 0;
+    font-size: 1rem;
+    content: "Pre-visualizacao indisponivel, verifique o link do projeto ao lado para a visualização na integra :D";
+  }
+
+  @media (min-width: 300px) and (max-width:991px) {
+    .template::after {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 400;
+      width: 100%;
+      margin: -2px 120px 0 0;
+      font-size: 1rem;
+      content: "Pre-visualizacao indisponivel no momento, verifique o link :D";
+    }
+
   }

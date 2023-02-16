@@ -1,5 +1,6 @@
+import { SharedService } from './../shared.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../api.service';
 import { IInfo } from '../info';
 
@@ -13,18 +14,21 @@ export class PortolioDetailsComponent implements OnInit {
   tool: IInfo | undefined;
   errorMessage = '';
   active = false;
-  
-  constructor(
-    private route: ActivatedRoute,
-    private apiService: ApiService
-    ) {
+
+  constructor(private route: ActivatedRoute,
+    private apiService: ApiService,
+    private sharedService: SharedService,
+    private router: Router) {
       this.active = true;
-     }
+
+  }
 
   ngOnInit(): void {
-    
+    window.onpopstate = () => {
+      location.reload();
+    }
+    this.sharedService.setIsActived(true);
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    console.log(this.route.snapshot.params)
 
     if(id){
       this.getToolId(id);
@@ -32,7 +36,7 @@ export class PortolioDetailsComponent implements OnInit {
   }
 
   getToolId(id: number): void{
-    
+
     this.apiService.getToolsById(id).subscribe({
       next: tool => this.tool = tool,
       error: err => this.errorMessage = err

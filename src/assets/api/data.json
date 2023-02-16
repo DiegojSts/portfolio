@@ -14,41 +14,60 @@
         "technologies_1": "Spring Boot",
         "technologies_2": "React",
         "github": "https://github.com/DiegojSts/DevSuperior"
-      
+
     },
     {
         "id": 2,
-        "projectName": "Lista de Produtos",
-        "category": "Framework Frontend",
-        "programmingLanguage": "Typescript",
-        "shortDescription": "Calculadora web é um mini projeto com o intuito de solidificar alguns conhecimentos nas tecnologias utilizadas [HTML, CSS e JavaScript]. A aplicação consiste em operações de adição, subtração, multiplicação e divisão",
-        "fullDescription": "Calculadora web é um mini projeto com o intuito de solidificar alguns conhecimentos nas tecnologias utilizadas [HTML, CSS e JavaScript]. A aplicação consiste em operações de adição, subtração, multiplicação e divisão",
-        "mainImageUrl": "../../assets/img/Calculadora.png",
-        "identifier": "Angular",
-        "gif": "../../assets/gif/Calc.gif",
-        "projectUrl": "",
-        "projectDate": "01 Mar, 2022",
-        "technologies_1": "Angular",
-        "technologies_2": "Bootstrap",
-        "github": "www.github.com"
-        
+        "projectName": "Consumo de API - Geração de Conselhos",
+        "category": "Frontend",
+        "programmingLanguage": "Javascript",
+        "shortDescription": "Projeto da plataforma do Frontend Mentor para consumo de api pública de geração de conselhos",
+        "fullDescription": "O projeto consiste no consumo de uma api publica para gerar conselhos a cada nova interação",
+        "mainImageUrl": "",
+        "identifier": "CSS, HTML, JS",
+        "gif": "",
+        "projectUrl": "https://diegojsts.github.io/FrontEndMentor-Advice-API/",
+        "projectDate": "25 Jul, 2022",
+        "technologies_1": "CSS",
+        "technologies_2": "HTML",
+        "github": "https://github.com/DiegojSts/FrontEndMentor-Advice-API"
+
     },
     {
         "id": 3,
-        "projectName": "Calculadora",
+        "projectName": "Ecommerce",
         "category": "Frontend",
-        "programmingLanguage": "Javascript",
-        "shortDescription": "Calculadora web é um mini projeto com o intuito de solidificar alguns conhecimentos nas tecnologias utilizadas [HTML, CSS e JavaScript]. A aplicação consiste em operações de adição, subtração, multiplicação e divisão",
-        "fullDescription": "Calculadora web é um mini projeto com o intuito de solidificar alguns conhecimentos nas tecnologias utilizadas [HTML, CSS e JavaScript]. A aplicação consiste em operações de adição, subtração, multiplicação e divisão",
-        "mainImageUrl": "../../assets/img/Calculadora.png",
-        "identifier": "CSS, HTML, JS",
-        "gif": "../../assets/gif/Calc.gif",
-        "projectUrl": "",
-        "projectDate": "01 Mar, 2022",
-        "technologies_1": "HTML",
-        "technologies_2": "CSS",
-        "github": "www.github.com"
-        
-    }
-   
+        "programmingLanguage": "Typescript",
+        "shortDescription": "Ecommerce de produtos",
+        "fullDescription": "Esse projeto aborda conceitos sobre manipulação de dados de ecommerce e exibição das informações de produtos, bem como a simulação de compra e visualização de carrinho de compras",
+        "mainImageUrl": "",
+        "identifier": "Angular",
+        "gif": "",
+        "projectUrl": "https://diegojsts.github.io/angular-ecommerce/produtos",
+        "projectDate": "21 Nov, 2022",
+        "technologies_1": "Angular",
+        "technologies_2": "Angular Material",
+        "github": "https://github.com/DiegojSts/angular-ecommerce"
+
+    },
+
+    {
+      "id": 4,
+      "projectName": "Avaliação Interativa",
+      "category": "Frontend",
+      "programmingLanguage": "Javascript",
+      "shortDescription": "Desafio da plataforma FrontendMentor ",
+      "fullDescription": "O desafio consiste na construção de um card interativo de rating utilizando HTML, CSS E Javascript",
+      "mainImageUrl": "",
+      "identifier": "CSS, HTML, JS",
+      "gif": "",
+      "projectUrl": "https://diegojsts.github.io/FrontEndMentor-Rating/",
+      "projectDate": "21 Nov, 2022",
+      "technologies_1": "HTML",
+      "technologies_2": "CSS",
+      "github": "https://github.com/DiegojSts/FrontEndMentor-Rating"
+
+  }
+
+
 ]
