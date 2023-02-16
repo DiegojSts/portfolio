@@ -37,10 +37,12 @@ export class PortolioDetailsComponent implements OnInit {
 
   getToolId(id: number): void{
 
-    this.apiService.getToolsById(id).subscribe({
-      next: tool => this.tool = tool,
-      error: err => this.errorMessage = err
-    })
+    // this.apiService.getToolsById(id).subscribe({
+    //   next: tool => this.tool = tool,
+    //   error: err => this.errorMessage = err
+    // })
+
+    this.tool = this.apiService.getToolsById(id);
   }
 
 }

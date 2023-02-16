@@ -17,7 +17,7 @@ export class PortfolioComponent implements OnInit {
 
 
   items: IInfo[] = [];
-  sub!: Subscription;
+  // sub!: Subscription;
   errorMessage = '';
   active = false;
 
@@ -25,13 +25,16 @@ export class PortfolioComponent implements OnInit {
   constructor(private apiService: ApiService, private sharedService: SharedService) {
 
 
-    this.sub = this.apiService.getTools().subscribe({
-      next: item => {
-        this.items = item
+    // this.sub = this.apiService.getTools().subscribe({
+    //   next: item => {
+    //     this.items = item
 
-      },
-      error: err => this.errorMessage = err
-    })
+    //   },
+    //   error: err => this.errorMessage = err
+    // })
+
+    this.items = this.apiService.getTools();
+    console.log(this.items)
   }
 
 
