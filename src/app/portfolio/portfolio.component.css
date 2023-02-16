@@ -5,24 +5,46 @@
 
   .portfolio #portfolio-filters li {
     cursor: pointer;
-    margin: 0 10px 10px 10px;
+    margin: -16px 10px 10px 10px;
     font-size: 15px;
     font-weight: 600;
     line-height: 1;
-    padding: 7px 10px;
+    padding: 12px 10px;
     text-transform: uppercase;
-    color: #000000;
-    border-bottom: 1px solid;
+    color: #ffffff;
+    border-radius: 2px;
   }
+
+
 
 .portfolio #portfolio-filters li:hover,
 .portfolio #portfolio-filters, h5 {
-  color: #f3a200;
+  color: #ffffffda;
+}
+
+.portfolio-bg {
+  background-color: #484a4e;
 }
 
 .active {
-  color: #f3a200 !important;
-  border-bottom: 7px solid #f3a200 !important;
+
+  /* border-bottom: 7px solid #bb86fc !important; */
+  background-color: white;
+  transform: rotate(-12deg);
+  transition: all 1s ease-in-out;
+  color: #000000 !important;
+
+
+
+
+}
+
+.active::before {
+  content: " ↠ ";
+  margin-left: 10px;
+  border-radius: 50%;
+  padding-top: 200px;
+  color: #000000;
 
 }
 
@@ -51,22 +73,95 @@ img {
 
 
 
-.ul-options {
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  text-align: center;
-  width: 60%;
-}
+
 
 .display {
   display: none;
 }
 
-@media (min-width: 300px) and (max-width:767px) {
+
+.card-text {
+  color: #ffffff;
+}
+
+i {
+  color: #bb86fc;
+}
+
+.card {
+  cursor: default;
+  background-color: #151515;
+  font-family: 'Source Code Pro', monospace;
+  display: grid;
+  transform: scale(1);
+  opacity: 1 !important;
+  transition: all 150ms ease-in-out;
+
+}
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 1rem 0;
+  display: grid;
+  place-content: center;
+}
+
+
+.card:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: solid 2px #bb86fc;
+
+
+
+}
+
+
+.cards:hover  {
+  transform: rotate(12deg);
+  border: solid 2px #bb86fc;
+  background-color: #151515;
+  border-radius: 5px;
+  transition: all ease-in-out 0.8s;
+
+
+}
+
+.cards:hover > .card:not(:hover){
+  opacity: 0.5;
+
+
+}
+
+
+
+
+
+
+@media (min-width: 300px) and (max-width:991px) {
   #portfolio-filters li {
     display: inline-block;
     text-align: left;
   }
+
+  .ul-options {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+  }
+
+  .active{
+    transform: rotate(0);
+    background-color: #484a4e ;
+
+  }
+
+  .card {
+    margin-left: 2px !important ;
+  }
+
+
 }
