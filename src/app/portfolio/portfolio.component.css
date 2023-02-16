@@ -29,7 +29,6 @@
 
 .active {
 
-  /* border-bottom: 7px solid #bb86fc !important; */
   background-color: white;
   transform: rotate(-12deg);
   transition: all 1s ease-in-out;
