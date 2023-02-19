@@ -63,7 +63,7 @@ export const objectInfo: IInfo[] = [{
     mainImageUrl: "",
     identifier: "Angular",
     gif: "",
-    projectUrl: "https://diegojsts.github.io/angular-ecommerce/produtos",
+    projectUrl: "https://diegojsts.github.io/angular-ecommerce/",
     projectDate: "21 Nov, 2022",
     technologies_1: "Angular",
     technologies_2: "Angular Material",
